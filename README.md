@@ -1,4 +1,4 @@
-# 📘 Manual de Procedimentos – Módulos RH
+# 📘 Manual de Procedimentos – Módulos RM
 
 Sistema Web desenvolvido para organizar e disponibilizar procedimentos operacionais por módulo, de forma simples, rápida e estruturada.
 
