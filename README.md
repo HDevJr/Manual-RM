@@ -1,4 +1,4 @@
-# 📘 Manual de Procedimentos – Grupo Fetz
+# 📘 Manual de Procedimentos – Módulos RH
 
 Sistema Web desenvolvido para organizar e disponibilizar procedimentos operacionais por módulo, de forma simples, rápida e estruturada.
 
