@@ -1,0 +1,55 @@
+/* ======== TÍTULO PRINCIPAL ======== */
+
+.procedure-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #005f7a;
+    margin-bottom: 20px;
+}
+
+/* ======== PARÁGRAFOS ======== */
+
+.procedure-text {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #444;
+}
+span {
+    font-weight: 800;
+}
+
+/* ======== IMAGENS DO PROCEDIMENTO ======== */
+
+.procedure-image {
+    width: 100%;
+    max-width: 800px;        /* limita para não ficar gigante */
+    border-radius: 4px;
+    margin: 12px 0 24px;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+/* Efeito elegante ao passar o mouse */
+.procedure-image:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    transition: .2s;
+}
+
+/* ======== CONTAINER DA PÁGINA ======== */
+
+.procedure-container {
+    padding: 10px 4px 30px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ======== NUMERAÇÃO DOS PASSOS ======== */
+
+.procedure-step {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+    color: #005f7a;
+}

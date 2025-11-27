@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI, Arial, sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BARRA SUPERIOR */
+.top-bar {
+  height: 48px;
+  background: #00749c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-left .burger {
+  width: 26px;
+  height: 26px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.top-center {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.top-center span {
+  cursor: default;
+}
+
+.top-right img {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* LAYOUT PRINCIPAL */
+.layout {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+/* MENU LATERAL */
+.side-menu {
+  width: 200px;
+  background: #00749c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-header {
+  padding: 12px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.side-list {
+  list-style: none;
+  flex: 1;
+  overflow: visible;
+}
+
+.side-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.side-item:hover {
+  background: #e5f3f8;
+  color: #0c5070;
+}
+
+.side-item-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.side-item-label {
+  flex: 1;
+}
+
+.side-item-arrow {
+  font-size: 10px;
+}
+
+/* SUBMENU 2º NÍVEL (RH / BackOffice) */
+.submenu-panel {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 6px;
+
+  background: #ffffff;
+  min-width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border-radius: 3px;
+  padding: 10px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition:
+    opacity 0.15s ease-in-out,
+    transform 0.15s ease-in-out,
+    visibility 0.12s ease-in-out;
+
+  z-index: 999;
+}
+
+/* mostra submenu 2º nível quando passa o mouse no módulo (RH / BackOffice) */
+.side-item:hover > .submenu-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.submenu-title {
+  padding: 6px 14px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 4px;
+}
+
+.submenu-list {
+  list-style: none;
+}
+
+/* ITENS DO SUBMENU (2º E 3º NÍVEL) */
+.submenu-item {
+  position: relative;       /* importante p/ 3º nível */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submenu-item:hover {
+  background: #f3f7fb;
+}
+
+.submenu-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 3px;
+  background: #e6f2f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #00749c;
+}
+
+/* seta do item que TEM submenu (3º nível) */
+.submenu-arrow {
+  margin-left: auto;
+  font-size: 10px;
+  color: #888;
+}
+
+/* 3º NÍVEL (submenu dentro do submenu) */
+.submenu-level2 {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 6px;
+
+  background: #ffffff;
+  min-width: 240px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border-radius: 3px;
+  padding: 8px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition:
+    opacity 0.15s ease-in-out,
+    transform 0.15s ease-in-out,
+    visibility 0.12s ease-in-out;
+
+  z-index: 1000;
+}
+
+/* mostra o 3º nível quando passa o mouse no item pai */
+.submenu-item.has-sub:hover > .submenu-level2 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* RODAPÉ MENU LATERAL */
+.side-footer {
+  padding: 8px 10px;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.side-footer button {
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 2px;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  background: #e6f2f8;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.side-footer .danger {
+  background: #e2574c;
+  color: #fff;
+}
+
+/* ÁREA DE CONTEÚDO */
+.content {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 18px;
+  font-size: 14px;
+}
+
+.content-placeholder {
+  border: 1px dashed #ccc;
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 13px;
+}
