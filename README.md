@@ -2,21 +2,22 @@
 
 Sistema Web desenvolvido para organizar e disponibilizar procedimentos operacionais por módulo, de forma simples, rápida e estruturada.
 
-Este projeto simula o modelo de portais internos corporativos (como sistemas ERP) e tem como foco facilitar a navegação entre áreas como RH e BackOffice, organizando manuais e instruções de forma escalável.
+Este projeto simula o modelo de portais internos corporativos (como sistemas ERP) e tem como foco facilitar a navegação entre áreas como **RH** e **BackOffice**, organizando manuais e instruções de forma escalável.
 
-────────────────────────────────────────────────────────────
+---
 
-## TECNOLOGIAS UTILIZADAS
+## 🧩 TECNOLOGIAS UTILIZADAS
 
 - PHP (roteamento por parâmetro GET)
 - HTML5
 - CSS3
 - Estrutura modular por pastas
 
-────────────────────────────────────────────────────────────
+---
 
-## ESTRUTURA DO PROJETO
+## 📂 ESTRUTURA DO PROJETO
 
+```bash
 /
 ├── index.php
 ├── config/
